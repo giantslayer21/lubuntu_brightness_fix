@@ -17,7 +17,7 @@ Changing the value stored in that file aparently changes the brightness of the s
     `sudo chmod 755 brightness_control`
 3. Now open the sudoers file to make the file execute without having to need sudo every time you use it:
     `sudo visudo /etc/sudoers`
-4. Add the following lines at the end of the sudoers file:
+4. Add the following lines at the end of the sudoers file (Yes! The comment line too.Trust me, it will serve as a reference later.):
     ```
     #the following commands can be run as sudo without giving password
     user_name ALL=(root) NOPASSWD: /bin/brightness_control
