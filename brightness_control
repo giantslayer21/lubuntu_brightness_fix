@@ -1,15 +1,22 @@
 #!/bin/bash
-#simply
-echo "hello"
+#Should work only on intel machines running linux
+#This script was designed to fix the brightness issue on machines running lubuntu
+
+#Get the current brightness value from the file
 val=$(cat /sys/class/backlight/intel_backlight/brightness)
+
+#check if plus sign follows the command.
+# "+"  => increase brightness
+# else => decrease brightness
 if [ "$1" = "+" ] ; then
   val=`expr $val + 100`
 else
   val=`expr $val - 100`
+  #Prevent the value from going below 0 or whatever value you want
   if [ $val -le 0 ];then
     val=0
   fi
 fi
+
+#finally write the value back into the file
 echo $val | tee /sys/class/backlight/intel_backlight/brightness
-#num=`expr $num + 50`
-#echo $num > /sys/class/backlight/intel_backlight/brightness
