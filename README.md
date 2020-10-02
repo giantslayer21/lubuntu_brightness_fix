@@ -1,4 +1,4 @@
-# FIX THE BRIGHTNESS iSSUE ON LUBUNTU (OR ANY LINUX DISTRO)
+# FIX THE BRIGHTNESS ISSUE ON LUBUNTU (OR ANY LINUX DISTRO)
 A bash script to fix the brightness issue in Lubuntu on Intel laptops. (This should probably work on any linux distro, given that it is an intel machine.)
 
 ## Backstory:
@@ -24,7 +24,7 @@ Changing the value stored in that file aparently changes the brightness of the s
     ```
 5. Save and exit. Now open the respective Shortcut Keys Application on your distro.
     * Add a new shortcut and pass the following commads to your preferred shortcuts:
-      - To increase brightness: `sudo brightness_control +`
+      - To increase brightness: `sudo brightness_control +
       - To decrease brightness: `sudo brightness_control -`
     Here's what I did. I just replaced the existing keys' associated commands with appropriate command from above
 
